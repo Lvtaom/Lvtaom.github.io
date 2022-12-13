@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+<style>
+div{
+width:200px;
+background-color:rgba(107,142,12,0.2);
+color:blue;
+text-align:center;
+ display:inline-block;
+border:1px solid red;
+
+margin:10px;
+padding:20px;
+position:absolute;
+border-radius:50%;
+
+transition:all 1.5s;
+}
+</style>
+ </head>
+ <body>
+ <script>
+ var s='热带风暴“妮可”在当地时间11月9日抵达巴哈马群岛时升级为飓风，并向美国佛罗里达州的大西洋海岸线靠近。';
+ 
+ for(var i=0;i<100;i++){
+ var divm=document.createElement('div');
+ divm.textContent=s;
+divm.onmouseover=function(){
+	var x=Math.floor(Math.random()*window.innerWidth);
+	var y=Math.floor(Math.random()*600);
+	this.style.left=x+'px';
+	this.style.top=y+'px';
+}
+ autom(divm);
+ document.body.appendChild(divm);
+ }
+ function  autom(divm){
+	var x=Math.floor(Math.random()*600);
+	var y=Math.floor(Math.random()*600);
+	divm.style.left=x+'px';
+	divm.style.top=y+'px';
+	 }
+ </script>
+ </body>
+</html>
